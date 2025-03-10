@@ -10,3 +10,6 @@ data "terraform_remote_state" "aws_dev_vpc" {
   }
 }
 
+data "aws_eks_cluster_auth" "eks_auth" {
+  name = module.eks.cluster_name
+}
