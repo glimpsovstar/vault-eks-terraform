@@ -10,15 +10,16 @@ variable "cluster_name" {
   default     = "vault-cluster"
 }
 
-variable "subnet_ids" {
-  description = "List of subnet IDs for the EKS cluster"
-  type        = list(string)
-}
-
-variable "vpc_id" {
-  description = "VPC ID for the EKS cluster"
-  type        = string
-}
+# Commenting below variables since, they will be imported from other workspaces.
+#variable "subnet_ids" {
+#  description = "List of subnet IDs for the EKS cluster"
+#  type        = list(string)
+#}
+#
+#variable "vpc_id" {
+#  description = "VPC ID for the EKS cluster"
+#  type        = string
+#}
 
 variable "vault_dns_name" {
   description = "Vault public domain name"
