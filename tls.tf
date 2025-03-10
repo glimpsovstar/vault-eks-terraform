@@ -1,4 +1,6 @@
 resource "kubernetes_manifest" "letsencrypt_issuer" {
+  depends_on = [module.eks] # To ensure EKS is ready before cert-manager is applied
+
   manifest = {
     apiVersion = "cert-manager.io/v1"
     kind       = "ClusterIssuer"
