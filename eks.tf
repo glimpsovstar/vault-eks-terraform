@@ -6,7 +6,7 @@ module "eks" {
   subnet_ids = data.terraform_remote_state.aws_dev_vpc.outputs.subnet_ids
   vpc_id     = data.terraform_remote_state.aws_dev_vpc.outputs.vpc_id
 
-  node_groups = {
+  eks_managed_node_groups = {
     default = {
       desired_capacity = 2
       max_capacity     = 3
